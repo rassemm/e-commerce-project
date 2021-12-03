@@ -48,7 +48,7 @@ label.error {
                         </div>
                     </div>
                     <div>
-                        <h3 class="product-price">DT {{$product->discount}} <del class="product-old-price">DT {{$product->price}}</del></h3>
+                        <h3 class="product-price">TND {{$product->discount}} <del class="product-old-price">TND {{$product->price}}</del></h3>
                         <span class="product-available">In Stock</span>
                     </div>
                     <p>{!!$product->description!!}</p>

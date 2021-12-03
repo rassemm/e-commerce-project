@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin Dashboard</title>
+    <title> Admin Dashboard</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('vendors/iconfonts/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.base.css')}}">
@@ -27,18 +27,18 @@
         <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
                 <a class="navbar-brand brand-logo" href="{{route('admin.dashboard')}}">
-                    <div style="color: #007bff;">Electro</div>
+                    {{-- <div style="color: #007bff;">Electro</div> --}}
                 </a>
                 <a class="navbar-brand brand-logo-mini" href="{{route('admin.dashboard')}}">
-                    <div style="color: #007bff;">Electro</div>
+                    {{-- <div style="color: #007bff;">Electro</div> --}}
                 </a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center">
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item dropdown d-none d-xl-inline-block">
                         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                            <span class="profile-text">{{session()->get('admin')->name}}</span>
-                            <img class="img-xs rounded-circle" src="{{asset('images/faces/face1.jpg')}}" alt="Profile image">
+                            {{-- <span class="profile-text">{{session()->get('admin')->name}}</span> --}}
+                            {{-- <img class="img-xs rounded-circle" src="{{asset('images/faces/face1.jpg')}}" alt="Profile image"> --}}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                             <br>
@@ -63,10 +63,10 @@
                         <div class="nav-link">
                             <div class="user-wrapper">
                                 <div class="profile-image">
-                                    <img src="{{asset('images/faces/face1.jpg')}}" alt="profile image">
+                                    {{-- <img src="{{asset('images/faces/face1.jpg')}}" alt="profile image"> --}}
                                 </div>
                                 <div class="text-wrapper">
-                                    <p class="profile-name">{{session()->get('admin')->name}}</p>
+                                    {{-- <p class="profile-name">{{session()->get('admin')->name}}</p> --}}
                                     <div>
                                         <small class="designation text-muted">Admin</small>
                                         <span class="status-indicator online"></span>
@@ -76,7 +76,8 @@
                         </div>
                     </li>
                     <li class="nav-item {{Route::is('admin.dashboard') ? 'active' : ''}}">
-                        <a class="nav-link" href="{{route('admin.dashboard')}}">
+                        <a class="nav-link" href="">
+                            {{-- {{route('admin.dashboard')}}" --}}
                             <i class="menu-icon mdi mdi-television"></i>
                             <span class="menu-title">Dashboard</span>
                         </a>
@@ -94,7 +95,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin.orderManagement')}}">
+                        <a class="nav-link" href="">
+                            {{-- {{route('admin.orderManagement')}} --}}
                             <i class="menu-icon mdi mdi-content-paste"></i>
                             <span class="menu-title">Order Management</span>
                         </a>

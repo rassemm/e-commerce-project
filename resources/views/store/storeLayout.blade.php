@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Electro</title>
+    <title>Ecommerce Hssin</title>
 
     <link rel="shortcut icon" href="{{asset('favicon.png')}}" />
     <!-- Google font -->
@@ -62,11 +62,11 @@
         <!-- TOP HEADER -->
         <div id="top-header">
             <div class="container">
-                <ul id="head_links" class="header-links pull-left">
+                {{-- <ul id="head_links" class="header-links pull-left">
                     <li><a href="#"><i class="fa fa-phone"></i> 000000000</a></li>
                     <li><a href="#"><i class="fa fa-envelope-o"></i> support@pfe.com</a></li>
                     <li><a href="#"><i class="fa fa-map-marker"></i> Lorem ipsum</a></li>
-                </ul>
+                </ul> --}}
                 <ul class="header-links pull-right">
                     @if(session()->has('user'))
                       <li><a style="color:white" href="{{route('user.history')}}">{{session()->get('user')->full_name}} </a></li>  
@@ -92,7 +92,7 @@
                     <div class="col-md-3">
                         <div class="header-logo">
                             <a href="{{route('user.home')}}" class="logo">
-                                <img src="{{asset('img/logo.png')}}" alt="">
+                                {{-- <img src="{{asset('img/logo.png')}}" alt=""> --}}
                             </a>
                         </div>
                     </div>
@@ -266,11 +266,11 @@
                             <h3 class="footer-title">About Us</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 incididunt ut.</p>
-                            <ul class="footer-links">
+                            {{-- <ul class="footer-links">
                                 <li><a href="#"><i class="fa fa-map-marker"></i>Lorem ipsum dolor sit amet</a></li>
                                 <li><a href="#"><i class="fa fa-phone"></i>00000000000</a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
                     </div>
 

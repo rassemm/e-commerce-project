@@ -12,6 +12,10 @@
 */
 //Dashboard
 //login
+
+Route::get('/testt', function () {
+    return view('login.login');
+});
 Route::get('admin', 'loginController@adminIndex')->name('admin.login');
 Route::post('admin', 'loginController@adminPosted');
 

@@ -61,17 +61,17 @@
                                     <th>
                                         Type
                                     </th>
-                                    <th>
+                                    {{-- <th>
                                         Created At
                                     </th>
                                     <th>
                                         Updated At
-                                    </th>
+                                    </th> --}}
                                     <th>
                                         Edit
                                     </th>
                                     <th>
-                                        Update
+                                        Delete
                                     </th>
                                 </tr>
                             </thead>
@@ -84,12 +84,12 @@
                                     <td>
                                         {{$cat->type}}
                                     </td>
-                                    <td>
+                                    {{-- <td>
                                         {{$cat->created_at}}
                                     </td>
                                     <td>
                                         {{$cat->updated_at}}
-                                    </td>
+                                    </td> --}}
                                     <td>
                                         <a href="{{route('admin.categories.edit', ['id' => $cat->id])}}" class="btn btn-warning">Edit</a>
                                     </td>

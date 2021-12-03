@@ -8,9 +8,17 @@
     <script src="{{asset('js/lib/jquery.js')}}"></script>
     <script src="{{asset('js/dist/jquery.validate.js')}}"></script>
     <title>Admin Login</title>
+    <link rel="stylesheet" 
+    href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <style>
-    @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+    /* @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
   width: 360px;
@@ -101,11 +109,11 @@
   color: #EF3B3A;
 }
 body {
-  background: #76b852; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-  background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);
+  background: blue; /* fallback for old browsers 
+  background: -webkit-linear-gradient(right,  blue,  blue);
+  background: -moz-linear-gradient(right,  blue);
+  background: -o-linear-gradient(right,  blue);
+  background: linear-gradient(to left,  blue);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
@@ -116,15 +124,124 @@ label.error {
   background-color: #f2dede;
   
 }
+.input-icons i {
+            position: absolute;
+        }
+          
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+          
+        .icon {
+            padding: 10px;
+            min-width: 40px;
+        }
+          
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        } */
+        body{
+        background: url(../img/admin.png) no-repeat;
+        background-size: 100%;
+    }
+    .codehim-form{
+        max-width: 400px;
+        min-height: 400px;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 4px 2px 16px rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+        margin:  20px auto 0 auto;
+        padding: 25px;
+        color: #414141;
+            
+    }
+    .cm-input{
+        display: block;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%; 
+        margin: 14px auto;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        
+        
+    }
+    .cm-input:focus{
+        outline: 0;
+        border-color: #f9cb81;
+        
+    }
+    .cm-input:invalid{
+        border-color: #e41b17;
+        
+    }
+    .btn-login{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 0;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+        
+    }
+    .btn-login:focus{
+        outline: 0;
+    }
+    
+    .btn-login:hover{
+        opacity: 0.8;
+        transition: .3s;
+    }
+    
+    /* Gradient Background */
+    .gr-bg{
+        background: rgb(252,205,128);
+        background: linear-gradient(90deg, rgba(252,205,128,1) 0%, rgba(209,122,142,1) 55%, rgba(220,159,174,1) 100%);   
+    }
+    .form-title{
+        padding: 12px;
+        text-align: center;
+        position: relative;
+    }
+    .form-title h2{
+        color: #5c86e1;
+    }
+    .form-title .user-icon{
+        position: absolute;
+        font-size: 42px;
+        color: #fff;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        border-radius: 45px;
+        top: -60px;
+        left: -45px;
+}
 </style>
 <body>
     <div class="login-page">
         <div class="form" >
-            <form class="login-form" id="loginForm" method="post">
+            <form class="login-form codehim-form" id="loginForm" method="post">
             {{csrf_field()}}
-                <input type="text" name="Username" id="Username" placeholder="username" value="admin"/>
-                <input type="password" name="Password" id="Password" placeholder="password" value="12345" />
-                <input type="submit" name="loginButton" id="loginButton" value="LOGIN" />
+            <div class="form-title">
+              <div class="user-icon gr-bg">
+                 <i class="fa fa-user"></i>
+              </div>
+              <h2> Login Admin</h2>
+            </div>
+            <div class="input-icons">
+              <label for="email"><i class="fa fa-envelope"></i> Name:</label>
+             <input class=" cm-input" type="text" name="Username" id="Username" placeholder="username" value="admin"/>
+            <label for="pass"><i class="fa fa-lock"></i> Password:</label>
+             <input class=" cm-input" type="password" name="Password" id="Password" placeholder="password" value="12345" />
+            <input   class="btn-login  gr-bg" type="submit" name="loginButton" id="loginButton" value="LOGIN" />
+            </div>
             </form>
         </div>
     </div>

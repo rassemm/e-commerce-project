@@ -33,13 +33,13 @@
                                 <div class="product-body">
                                     <p class="product-category">{{$product->category->name}}</p>
                                     <h3 class="product-name"><a href="{{route('user.view',['id'=>$product->id])}}">{{$product->name}}</a></h3>
-                                    <h4 class="product-price">DT {{$product->discount}} <del class="product-old-price">DT {{$product->price}}</del></h4>
+                                    <h4 class="product-price">TND {{$product->discount}} <del class="product-old-price">TND {{$product->price}}</del></h4>
                                     <div class="product-rating">
                                     </div>
                                     
                                 </div>
                                 <div class="add-to-cart">
-                                    <a class="add-to-cart-btn" href="{{route('user.view',['id'=>$product->id])}}"><i class="fa fa-shopping-cart"></i>Purchase</a>
+                                    {{-- <a class="add-to-cart-btn" href="{{route('user.view',['id'=>$product->id])}}"><i class="fa fa-shopping-cart"></i>Purchase</a> --}}
                                 </div>
                             </div>
                         </div>
